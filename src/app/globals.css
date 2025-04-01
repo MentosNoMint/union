@@ -1,25 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-raleway: var(--font-raleway);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-raleway: var(--font-raleway);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+@layer utilities {
+    .color {
+        height: 300px;
+        width: 100%;
+        background-image: radial-gradient(
+                closest-side,
+                rgba(255, 114, 0, 0.21),
+                transparent
+        );
+    }
+
+    .card {
+        position: relative;
+        width: 202px;
+        height: 138px;
+        transform-style: preserve-3d;
+        perspective: 1500px;
+        z-index: 10;
+    }
+    .card__face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-bottom-right-radius: 12px;
+    }
+
+    .card__face--front {
+        background-image: url('/assets/images/web-card.png');
+        background-position: center;
+        background-size: cover;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+    }
+
+    .card__face--back {
+        background-image: url('/assets/images/web-card-back.svg');
+        background-position: center;
+        background-size: cover;
+        transform: rotateY(180deg);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+    }
+
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-raleway), sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-raleway), sans-serif;
 }

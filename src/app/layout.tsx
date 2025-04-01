@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import {Raleway} from "next/font/google";
 import "./globals.css";
+import SmoothScrolling from "@/components/SmoothScrolling";
 
 const raleway = Raleway({
     subsets: ["latin"],
@@ -18,11 +19,14 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" className={'scroll-smooth'}>
+        <link rel="icon" href="/assets/images/favicon-icon.svg"/>
         <body
             className={`${raleway.variable} antialiased`}
         >
-        {children}
+        <SmoothScrolling>
+            {children}
+        </SmoothScrolling>
         </body>
         </html>
     );
