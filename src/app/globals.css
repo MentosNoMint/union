@@ -29,6 +29,32 @@
         );
     }
 
+    .color-2 {
+        height: 550px;
+        width: 700px;
+        position: absolute;
+        left: -250px;
+        top: 380px;
+        background-image: radial-gradient(
+                closest-side,
+                rgba(255, 114, 0, 0.21),
+                transparent
+        );
+    }
+
+    .color-3 {
+        height: 550px;
+        width: 700px;
+        position: absolute;
+        right: -250px;
+        top: -300px;
+        background-image: radial-gradient(
+                closest-side,
+                rgba(255, 114, 0, 0.21),
+                transparent
+        );
+    }
+
     .card {
         position: relative;
         width: 202px;
