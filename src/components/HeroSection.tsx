@@ -11,7 +11,7 @@ import Particle from "@/components/ui/heroSection/Particle";
 import Advantages from "@/components/Advantages";
 
 
-const HeroBlock = () => {
+const HeroSection = () => {
 
     interface ExtendedDivElement extends HTMLDivElement {
         _isRotating?: boolean;
@@ -167,4 +167,4 @@ const HeroBlock = () => {
     );
 }
 
-export default HeroBlock;
+export default HeroSection;

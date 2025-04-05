@@ -30,11 +30,11 @@
     }
 
     .color-2 {
-        height: 550px;
-        width: 700px;
+        height: 600px;
+        width: 750px;
         position: absolute;
-        left: -250px;
-        top: 380px;
+        left: -350px;
+        top: 350px;
         background-image: radial-gradient(
                 closest-side,
                 rgba(255, 114, 0, 0.21),
@@ -43,11 +43,11 @@
     }
 
     .color-3 {
-        height: 550px;
-        width: 700px;
+        height: 600px;
+        width: 750px;
         position: absolute;
-        right: -250px;
-        top: -300px;
+        right: -300px;
+        top: -350px;
         background-image: radial-gradient(
                 closest-side,
                 rgba(255, 114, 0, 0.21),
