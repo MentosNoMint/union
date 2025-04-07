@@ -1,31 +1,51 @@
 "use client"
 
 import SwiperWrapper from "@/components/ui/aboutSection/SwiperWrapper";
-import React from "react";
+import React, {useState, useRef, useEffect} from "react";
 import InformationCard from "@/components/ui/aboutSection/InformationCard";
+import {informationCards} from "@/constants";
+import gsap from "gsap";
 
 const AboutSection = () => {
+    const [isCurrentSlide, setIsCurrentSlide] = useState('about');
+    const slideRef = useRef(null);
+    const switcherRef = useRef(null);
+
+    const animateSlide = (slideName: string) => {
+        switch (slideName) {
+            case 'about':
+                gsap.to(slideRef.current, {translateX: '0', duration: 0.5})
+                gsap.to(switcherRef.current, {translateX: '0', width: '4.8rem', duration: 0.3})
+                break;
+            case 'map':
+                gsap.to(slideRef.current, {translateX: '-114.5%', duration: 0.5})
+                gsap.to(switcherRef.current, {translateX: '70px', width: '110px', duration: 0.3})
+                break;
+            case 'partner':
+                gsap.to(slideRef.current, {translateX: '-214.5%', duration: 0.5})
+                gsap.to(switcherRef.current, {translateX: '177px', width: '110px', duration: 0.3})
+                break;
+        }
+    }
+
+    const handleButtonClick = (slideName: string) => {
+        setIsCurrentSlide(slideName);
+    }
+
+    useEffect(() => {
+        animateSlide(isCurrentSlide);
+    }, [isCurrentSlide]);
+
     return (
         <div className={'w-full bg-white flex justify-center'}>
             <div className={'max-w-[86.25rem] w-full flex flex-col items-center'}>
-                <SwiperWrapper/>
-                <div className={'w-full mt-20 relative overflow-hidden h-[75vh]'}>
-                    <InformationCard text={{
-                        heading: 'О нас',
-                        title: <>Проект — <br/> Союз преимуществ</>,
-                        desc: 'Мы — команда, которая поможет вашему бизнесу занять лидирующие позиции в своей нише, увеличить базу клиентов и количество продаж.',
-                        secondDesc: 'Вступайте в наш проффсоюз',
-                        image: 'hand',
-                        mark: 'about'
-                    }} position={0}/>
-                    <InformationCard text={{
-                        heading: 'Геокарта',
-                        title: 'Ваша точка на геокарте профсоюза',
-                        desc: 'Ваша компания будет отмечена на карте, которую используют [X] тысяч человек ежемесячно.',
-                        secondDesc: 'Отмечайтесь на карте проффсоюза',
-                        image: 'map',
-                        mark: 'maps'
-                    }} position={-100}/>
+                <SwiperWrapper onButtonClick={handleButtonClick} ref={switcherRef}/>
+                <div className={'w-full overflow-hidden'}>
+                    <div className={'w-full mt-20 relative h-[75vh]'} ref={slideRef}>
+                        {informationCards.map((card, index) => (
+                            <InformationCard props={card.props} key={index}/>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
