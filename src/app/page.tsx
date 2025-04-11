@@ -1,6 +1,10 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import SliderSection from "@/components/SliderSection";
+import Faq from "@/components/Faq";
+import FormBlock from "@/components/FormBlock";
+import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
@@ -9,6 +13,10 @@ export default function Home() {
                 <Header/>
                 <HeroSection/>
                 <AboutSection/>
+                <SliderSection/>
+                <Faq/>
+                <FormBlock/>
+                <Footer/>
             </div>
         </div>
     );

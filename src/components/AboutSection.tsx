@@ -37,11 +37,11 @@ const AboutSection = () => {
     }, [isCurrentSlide]);
 
     return (
-        <div className={'w-full bg-white flex justify-center'}>
+        <div className={'w-full bg-white flex justify-center relative'}>
             <div className={'max-w-[86.25rem] w-full flex flex-col items-center'}>
                 <SwiperWrapper onButtonClick={handleButtonClick} ref={switcherRef}/>
                 <div className={'w-full overflow-hidden'}>
-                    <div className={'w-full mt-20 relative h-[75vh]'} ref={slideRef}>
+                    <div className={'w-full mt-20 relative h-[80vh]'} ref={slideRef}>
                         {informationCards.map((card, index) => (
                             <InformationCard props={card.props} key={index}/>
                         ))}
