@@ -43,6 +43,7 @@ const HeroSection = () => {
                 scrub: true,
             }
         })
+
         const card = gsap.to(cardRef.current, {
                 translateY: 90,
                 scale: 1.1,

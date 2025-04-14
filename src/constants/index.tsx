@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import {ReactNode} from "react";
 
 export const informationCards = [
     {
@@ -35,3 +35,14 @@ export const informationCards = [
         },
     },
 ];
+
+export const question = [
+    {
+        question: "Какие преимущества получит моя компания после вступления?",
+        answer: "Ваша компания получит поток клиентов, и рост продаж. Так как вы будете отмечены на карте профсоюза, что дает большой прирост"
+    },
+    {
+        question: "Сколько стоит вступление?",
+        answer: "Вступление полностью бесплатное, вступайте прямо сейчас!"
+    }
+]

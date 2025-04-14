@@ -2,9 +2,9 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import SliderSection from "@/components/SliderSection";
-import Faq from "@/components/Faq";
 import FormBlock from "@/components/FormBlock";
 import Footer from "@/components/Footer";
+import FaqSection from "@/components/FaqSection";
 
 export default function Home() {
     return (
@@ -14,7 +14,7 @@ export default function Home() {
                 <HeroSection/>
                 <AboutSection/>
                 <SliderSection/>
-                <Faq/>
+                <FaqSection/>
                 <FormBlock/>
                 <Footer/>
             </div>

@@ -60,7 +60,7 @@ const Advantages = () => {
     })
 
     return (
-        <div className={'h-[4000px] w-full'} ref={wrapperRef}>
+        <div className={'h-[3900px] w-full'} ref={wrapperRef}>
             <div className={'w-full mt-[600px] sticky top-0 max-w-full overflow-x-hidden h-[1000px]'}>
                 <div className={'opacity-0 w-full'} ref={lightRef}>
                     <div className={'color-2'}></div>
