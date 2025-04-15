@@ -141,10 +141,10 @@ const MatterComponent: React.FC = () => {
         return () => {
             if (render) Render.stop(render);
             if (runner) Runner.stop(runner);
-            World.clear(world);
+            World.clear(world, true);
             Engine.clear(engine);
             if (render?.canvas) render.canvas.remove();
-            render.textures = {};
+            render!.textures = {};
         };
     }, []);
 

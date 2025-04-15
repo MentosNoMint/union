@@ -50,7 +50,7 @@ const HeroSection = () => {
                 scrollTrigger: {
                     trigger: cardRef.current as gsap.DOMTarget,
                     start: '170% center',
-                    end: '+=3300',
+                    end: '+=3300 77%',
                     pin: true,
                     scrub: true,
                     onUpdate: (self) => {
@@ -119,17 +119,17 @@ const HeroSection = () => {
                         <div
                             className={'rounded-full bg-[#F6F8FA] w-[3.25rem] h-[3.25rem] flex justify-center items-center'}>
                             <Image src={'/assets/images/icon-company-1.svg'} alt={'icon-company'} width={56}
-                                   height={48}/>
+                                   height={48} style={{width: '3.5rem', height: '3rem'}}/>
                         </div>
                         <div
                             className={'rounded-full bg-[#F6F8FA] w-[3.25rem] h-[3.25rem] -ml-4 flex justify-center items-center'}>
                             <Image src={'/assets/images/icon-company-2.svg'} alt={'icon-company'} width={33}
-                                   height={33}/>
+                                   height={33} style={{width: '2rem', height: '2rem'}}/>
                         </div>
                         <div
                             className={'rounded-full bg-[#F6F8FA] w-[3.25rem] h-[3.25rem] -ml-4 flex justify-center items-center'}>
                             <Image src={'/assets/images/icon-company-3.svg'} alt={'icon-company'} width={39}
-                                   height={14}/>
+                                   height={14} style={{width: '2.375rem', height: '0.875rem'}}/>
                         </div>
                     </div>
                     <span className={'font-semibold text-base text-[#9F9F9F]'}>+20 компаний</span>

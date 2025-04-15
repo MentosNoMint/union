@@ -8,7 +8,7 @@ const Profit = () => {
             <div className={'px-3.5 flex flex-col'}>
                 <div
                     className={'mt-3.5 rounded-2xl bg-[#F6F8FA] w-[3.25rem] h-[3.25rem] flex justify-center items-center'}>
-                    <Image src={'/assets/images/logo.svg'} alt={'icon'} width={27.8} height={33}></Image>
+                    <Image src={'/assets/images/logo.svg'} alt={'icon'} width={27.8} height={33} style={{width: '2rem', height: '2rem'}}></Image>
                 </div>
                 <div className={'flex flex-col mt-6'}>
                     <p className={'font-semibold text-base text-black leading-[0.8rem]'}>Прибыль <br/> <span

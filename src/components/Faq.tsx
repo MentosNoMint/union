@@ -48,7 +48,7 @@ const Faq = ({question, answer}: FaqProps) => {
             </div>
             <div className={'flex flex-col'} ref={answerRef}>
                 {isOpen && (
-                    <p className={'text-black font-medium text-base ml-auto max-w-[400px] mt-12'}>{answer}</p>
+                    <p className={'text-black font-medium text-base ml-auto max-w-[25rem] mt-12'}>{answer}</p>
                 )}
             </div>
         </div>

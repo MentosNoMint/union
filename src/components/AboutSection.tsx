@@ -19,11 +19,11 @@ const AboutSection = () => {
                 break;
             case 'map':
                 gsap.to(slideRef.current, {translateX: '-114.5%', duration: 0.5})
-                gsap.to(switcherRef.current, {translateX: '70px', width: '110px', duration: 0.3})
+                gsap.to(switcherRef.current, {translateX: '4.375rem', width: '6.875rem', duration: 0.3})
                 break;
             case 'partner':
                 gsap.to(slideRef.current, {translateX: '-214.5%', duration: 0.5})
-                gsap.to(switcherRef.current, {translateX: '177px', width: '110px', duration: 0.3})
+                gsap.to(switcherRef.current, {translateX: '11.0625rem', width: '6.875rem', duration: 0.3})
                 break;
         }
     }
