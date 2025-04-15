@@ -14,9 +14,13 @@ export default function Home() {
                 <HeroSection/>
                 <AboutSection/>
                 <SliderSection/>
-                <FaqSection/>
-                <FormBlock/>
-                <Footer/>
+                <div className={'flex flex-col w-full items-center relative h-[125rem]'}>
+                    <FaqSection/>
+                    <div className={'top-0 sticky w-full z-40 flex flex-col items-center bg-[#F2F2F2]'}>
+                        <FormBlock/>
+                        <Footer/>
+                    </div>
+                </div>
             </div>
         </div>
     );

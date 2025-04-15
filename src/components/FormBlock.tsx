@@ -1,6 +1,14 @@
+'use client'
+
+import MatterComponent from "@/components/ui/MatterComponent";
+import {useInView} from "react-intersection-observer";
+
 const FormBlock = () => {
+    const {ref, inView} = useInView({
+        rootMargin: '-50px 0px',
+    });
     return (
-        <div className={'w-full bg-white pt-[17.5rem]'}>
+        <div className={'w-full bg-white'}>
             <div className={'flex bg-[#F2F2F2] w-full justify-center rounded-t-[4rem]'}>
                 <div className={'w-full bg-white max-w-[86.25rem] rounded-3xl mt-[7.5rem]'}>
                     <div className={'px-12 py-12 flex justify-between'}>
@@ -38,7 +46,11 @@ const FormBlock = () => {
                                 </div>
                             </form>
                         </div>
-                        <div></div>
+                        <div ref={ref}>
+                            {inView && (
+                                <MatterComponent/>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
