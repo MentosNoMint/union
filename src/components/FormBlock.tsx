@@ -5,7 +5,7 @@ import {useInView} from "react-intersection-observer";
 
 const FormBlock = () => {
     const {ref, inView} = useInView({
-        rootMargin: '-5% 0%',
+        rootMargin: '-2% 0%',
     });
     return (
         <div className={'w-full bg-white'}>

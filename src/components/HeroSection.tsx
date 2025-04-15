@@ -22,6 +22,12 @@ const HeroSection = () => {
     const triggerBlockRef = useRef(null);
     gsap.registerPlugin(ScrollTrigger);
 
+
+    function remToPx(rem:number) {
+        return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    }
+
+
     useGSAP(() => {
 
         const tl = gsap.timeline({
@@ -50,9 +56,10 @@ const HeroSection = () => {
                 scrollTrigger: {
                     trigger: cardRef.current as gsap.DOMTarget,
                     start: '170% center',
-                    end: '+=3300 77%',
+                    end: `+=${remToPx(206.25)} 60%`,
                     pin: true,
                     scrub: true,
+                    markers: true,
                     onUpdate: (self) => {
                         if (self.progress >= 0.18) {
                             if (!cardRef.current!._isRotating) {
