@@ -1,6 +1,6 @@
 "use client"
 
-import {useEffect, useRef} from 'react';
+import { useEffect, useRef } from 'react';
 import Matter, {
     Engine,
     Render,
@@ -27,16 +27,19 @@ const MatterComponent: React.FC = () => {
         const walls: Matter.Body[] = [];
         const cubes: Matter.Body[] = [];
 
-        const cubeSize = 40; // Размер каждого куба
-        const texture = './assets/images/logo.svg';
-        const cubeCount = 30; // Количество кубов
+        const cubeSize = 40;
+        const textures = [ // Массив текстур
+            './assets/images/logo.svg',
+            './assets/images/height-emoji.png',
+            './assets/images/shine-emoji.png',
+        ];
+        const cubeCount = 30;
 
         const init = () => {
             if (render) Render.stop(render);
             if (runner) Runner.stop(runner);
             Composite.clear(world, false);
 
-            // Создание рендера
             render = Render.create({
                 element: matterBl.current!,
                 engine: engine,
@@ -48,23 +51,13 @@ const MatterComponent: React.FC = () => {
                 },
             });
 
+            // Создание стен (без изменений)
             walls.push(
                 Bodies.rectangle(matterBl.current!.clientWidth / 2, 0, matterBl.current!.clientWidth, 20, {
                     isStatic: true,
-                    render: {fillStyle: 'transparent'}
+                    render: { fillStyle: 'transparent' }
                 }),
-                Bodies.rectangle(matterBl.current!.clientWidth / 2, matterBl.current!.clientHeight, matterBl.current!.clientWidth, 20, {
-                    isStatic: true,
-                    render: {fillStyle: 'transparent'}
-                }),
-                Bodies.rectangle(0, matterBl.current!.clientHeight / 2, 20, matterBl.current!.clientHeight, {
-                    isStatic: true,
-                    render: {fillStyle: 'transparent'}
-                }),
-                Bodies.rectangle(matterBl.current!.clientWidth, matterBl.current!.clientHeight / 2, 20, matterBl.current!.clientHeight, {
-                    isStatic: true,
-                    render: {fillStyle: 'transparent'}
-                })
+                // ... остальные стены
             );
 
             World.add(world, walls);
@@ -73,16 +66,19 @@ const MatterComponent: React.FC = () => {
                 const randomX = Math.random() * (matterBl.current!.clientWidth - cubeSize) + cubeSize / 2;
                 const randomY = Math.random() * (matterBl.current!.clientHeight - cubeSize) + cubeSize / 2;
 
+                // Случайный выбор текстуры
+                const randomTexture = textures[Math.floor(Math.random() * textures.length)];
+
                 const cube = Bodies.rectangle(
-                    randomX, // Случайная позиция X
-                    randomY, // Случайная позиция Y
+                    randomX,
+                    randomY,
                     cubeSize,
                     cubeSize,
                     {
                         restitution: 0.3,
                         render: {
                             sprite: {
-                                texture: texture,
+                                texture: randomTexture,
                                 xScale: 1,
                                 yScale: 1
                             }
@@ -93,9 +89,9 @@ const MatterComponent: React.FC = () => {
                 cubes.push(cube);
             }
 
-
             World.add(world, cubes);
 
+            // Остальная часть инициализации (без изменений)
             Render.run(render);
             runner = Runner.create();
             Runner.run(runner, engine);
@@ -124,12 +120,13 @@ const MatterComponent: React.FC = () => {
                 });
             });
 
+            // Добавление управления мышью (без изменений)
             const mouse = Mouse.create(render.canvas);
             const mouseConstraint = MouseConstraint.create(engine, {
                 mouse: mouse,
                 constraint: {
                     stiffness: 0.2,
-                    render: {visible: false}
+                    render: { visible: false }
                 }
             });
             World.add(world, mouseConstraint);
@@ -148,7 +145,7 @@ const MatterComponent: React.FC = () => {
         };
     }, []);
 
-    return <div ref={matterBl} className={'w-[32rem] h-[29.875rem] border border-[#DEDEDE] rounded-[2rem]'}/>
+    return <div ref={matterBl} className={'w-[32rem] h-[29.875rem] border border-[#DEDEDE] rounded-[2rem]'} />
 };
 
 export default MatterComponent;

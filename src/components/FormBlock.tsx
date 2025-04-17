@@ -8,7 +8,7 @@ const FormBlock = () => {
         rootMargin: '-2% 0%',
     });
     return (
-        <div className={'w-full bg-white'}>
+        <div className={'w-full bg-white'} id={'start'}>
             <div className={'flex bg-[#F2F2F2] w-full justify-center rounded-t-[4rem]'}>
                 <div className={'w-full bg-white max-w-[86.25rem] rounded-3xl mt-[7.5rem]'}>
                     <div className={'px-12 py-12 flex justify-between'}>

@@ -9,7 +9,7 @@ import Progress from "@/components/ui/heroSection/Progress";
 import Profit from "@/components/ui/heroSection/Profit";
 import Particle from "@/components/ui/heroSection/Particle";
 import Advantages from "@/components/Advantages";
-
+import {RemToPx} from "@/utils/RemToPx";
 
 const HeroSection = () => {
 
@@ -21,12 +21,6 @@ const HeroSection = () => {
     const whiteLineRef = useRef(null);
     const triggerBlockRef = useRef(null);
     gsap.registerPlugin(ScrollTrigger);
-
-
-    function remToPx(rem:number) {
-        return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
-    }
-
 
     useGSAP(() => {
 
@@ -56,10 +50,9 @@ const HeroSection = () => {
                 scrollTrigger: {
                     trigger: cardRef.current as gsap.DOMTarget,
                     start: '170% center',
-                    end: `+=${remToPx(206.25)} 60%`,
+                    end: `+=${RemToPx(206.25)} 60%`,
                     pin: true,
                     scrub: true,
-                    markers: true,
                     onUpdate: (self) => {
                         if (self.progress >= 0.18) {
                             if (!cardRef.current!._isRotating) {

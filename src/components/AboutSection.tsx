@@ -37,7 +37,7 @@ const AboutSection = () => {
     }, [isCurrentSlide]);
 
     return (
-        <div className={'w-full bg-white flex justify-center relative'}>
+        <div className={'w-full bg-white flex justify-center relative'} id={'about'}>
             <div className={'max-w-[86.25rem] w-full flex flex-col items-center'}>
                 <SwiperWrapper onButtonClick={handleButtonClick} ref={switcherRef}/>
                 <div className={'w-full overflow-hidden'}>
