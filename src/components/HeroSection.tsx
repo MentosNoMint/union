@@ -115,32 +115,52 @@ const HeroSection = () => {
         <div className={'bg-[#f2f2f2] w-full flex flex-col items-center'} ref={triggerBlockRef}>
             <div
                 className={'w-full bg-white h-[47.25rem] rounded-[2.75rem] max-w-[88.75rem] mt-7 flex flex-col items-center z-10'}>
-                <div className={'flex items-center gap-6 mt-9'}>
-                    <div className={'flex'}>
-                        <div
-                            className={'rounded-full bg-[#F6F8FA] w-[3.25rem] h-[3.25rem] flex justify-center items-center'}>
-                            <Image src={'/assets/images/icon-company-1.svg'} alt={'icon-company'} width={56}
-                                   height={48} style={{width: '3.5rem', height: '3rem'}}/>
-                        </div>
-                        <div
-                            className={'rounded-full bg-[#F6F8FA] w-[3.25rem] h-[3.25rem] -ml-4 flex justify-center items-center'}>
-                            <Image src={'/assets/images/icon-company-2.svg'} alt={'icon-company'} width={33}
-                                   height={33} style={{width: '2rem', height: '2rem'}}/>
-                        </div>
-                        <div
-                            className={'rounded-full bg-[#F6F8FA] w-[3.25rem] h-[3.25rem] -ml-4 flex justify-center items-center'}>
-                            <Image src={'/assets/images/icon-company-3.svg'} alt={'icon-company'} width={39}
-                                   height={14} style={{width: '2.375rem', height: '0.875rem'}}/>
-                        </div>
+                {/*<div className={'flex items-center gap-6 mt-9'}>*/}
+                {/*    <div className={'flex'}>*/}
+                {/*        <div*/}
+                {/*            className={'rounded-full bg-[#F6F8FA] w-[3.25rem] h-[3.25rem] flex justify-center items-center'}>*/}
+                {/*            <Image src={'/assets/images/icon-company-1.svg'} alt={'icon-company'} width={56}*/}
+                {/*                   height={48} style={{width: '3.5rem', height: '3rem'}}/>*/}
+                {/*        </div>*/}
+                {/*        <div*/}
+                {/*            className={'rounded-full bg-[#F6F8FA] w-[3.25rem] h-[3.25rem] -ml-4 flex justify-center items-center'}>*/}
+                {/*            <Image src={'/assets/images/cross.svg'} alt={'icon-company'} width={33}*/}
+                {/*                   height={33} style={{width: '2rem', height: '2rem'}}/>*/}
+                {/*        </div>*/}
+                {/*        <div*/}
+                {/*            className={'rounded-full bg-[#F6F8FA] w-[3.25rem] h-[3.25rem] -ml-4 flex justify-center items-center'}>*/}
+                {/*            <Image src={'/assets/images/icon-company-3.svg'} alt={'icon-company'} width={39}*/}
+                {/*                   height={14} style={{width: '2.375rem', height: '0.875rem'}}/>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*    <span className={'font-semibold text-base text-[#9F9F9F]'}>+20 компаний</span>*/}
+                {/*</div>*/}
+                <div className={'flex items-center flex-col justify-center mt-11'}>
+                    <div className={'flex gap-1 items-center'}>
+                <span className={'leading-[1.1875rem] font-medium text-base text-black text-center'}>Ваш бизнес на
+                                                                                                     карте</span>
+                        <Image alt={'icon'} src={'/assets/images/paperMap-emoji.png'} width={15}
+                               height={15} style={{width: '0.9375rem', height: '0.9375rem'}}/>
+                        <span className={'leading-[1.1875rem] font-medium text-base text-black text-center'}>привилегий для тысяч</span>
                     </div>
-                    <span className={'font-semibold text-base text-[#9F9F9F]'}>+20 компаний</span>
+                    <div className={'flex gap-1 items-center'}>
+                        <span className={'leading-[1.1875rem] font-medium text-base text-black text-center'}>членов профсоюзов.</span>
+                        <Image alt={'icon'} src={'/assets/images/custom-arrow.svg'} width={28}
+                               height={18} style={{width: '1.75rem', height: '1.125rem'}}/>
+                        <span className={'leading-[1.1875rem] font-medium text-base text-black text-center'}>Бесплатное подключение.</span>
+                    </div>
+                    <div className={'flex items-center gap-0.5'}>
+                        <span className={'leading-[1.1875rem] font-medium text-base text-black text-center'}>Увеличьте продажи — без затрат на рекламу</span>
+                        <Image alt={'icon'} src={'/assets/images/hand-emoji.png'} width={15}
+                               height={15} style={{width: '0.9375rem', height: '0.9375rem'}}/>
+                    </div>
                 </div>
-                <h1 className={'font-semibold text-[3.125rem] text-center leading-[3.6875rem] mt-4 text-black'}>Привлекайте
+                <h1 className={'font-semibold text-[3.125rem] text-center leading-[3.6875rem] mt-6 text-black'}>Привлекайте
                     новых <br/>клиентов через дисконтную <br/> систему профсоюзов
                 </h1>
-                <p className={'leading-[1.1875rem] font-medium text-base text-[#8C8C8C] text-center mt-5'}>Ваш бизнес на карте привилегий для тысяч членов профсоюзов. Бесплатное <br/> подключение. Увеличьте
-                    продажи — без затрат на рекламу.</p>
-                <Link className={'bg-black font-medium text-base text-white px-5.5 py-2.5 rounded-xl mt-5.5 cursor-pointer'} href={'#start'}>Приступить</Link>
+                <Link
+    className={'bg-black font-medium text-base text-white px-5.5 py-2.5 rounded-xl mt-8 cursor-pointer'}
+    href={'#start'}>Приступить</Link>
                 <div
                     className={'mt-auto max-w-[19.75rem] w-full h-[19.25rem] bg-cover relative bg-white'}
                     style={{backgroundImage: `url('/assets/images/phone-border.png')`}}>
