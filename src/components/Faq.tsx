@@ -44,7 +44,7 @@ const Faq = ({question, answer}: FaqProps) => {
             <div className={'mt-4 flex justify-between'}>
                 <p className={'font-semibold text-black text-2xl'}>{question}</p>
                 <Image src={'/assets/images/plus.svg'} alt={'icon'} width={20} height={20}
-                       className={'cursor-pointer'} ref={plusRef}></Image>
+                       className={'cursor-pointer'} ref={plusRef} style={{width: '1.25rem', height: '1.25rem'}}></Image>
             </div>
             <div className={'flex flex-col'} ref={answerRef}>
                 {isOpen && (

@@ -57,6 +57,11 @@ const Advantages = () => {
             scale: 1,
             duration: 1,
         })
+        tlAnswers.to(answersRef.current.children[4], {
+            transformOrigin: "bottom left",
+            scale: 1,
+            duration: 1,
+        })
     })
 
     return (
@@ -68,38 +73,45 @@ const Advantages = () => {
                 </div>
                 <div ref={answersRef}>
                     <div
-                        className={'w-[18.625rem] h-[5.25rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex items-center mt-20 ml-[15%] scale-0'}>
-                        <div className={'w-13 h-13 rounded-2xl bg-[#F6F6F6] ml-4 flex justify-center items-center'}>
+                        className={'w-[20.625rem] h-[5.25rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex items-center mt-20 ml-[15%] scale-0'}>
+                        <div className={'min-w-13 min-h-13 rounded-2xl bg-[#F6F6F6] ml-4 flex justify-center items-center'}>
                             <Image src={'/assets/images/people-emoji.png'} alt={'emoji'} width={28} height={28} style={{width: '1.75rem', height: '1.75rem'}}></Image>
                         </div>
                         <div className={'flex flex-col ml-3.5'}>
-                            <span className={'text-black font-semibold text-base leading-5'}>Больше клиентов</span>
-                            <span className={'font-medium text-base text-[#9F9F9F]'}>Сервис для привлечения</span>
+                            <span className={'text-black font-semibold text-base leading-5'}>Работаете с</span>
+                            <span className={'font-medium text-base text-[#9F9F9F] leading-5'}>платёжеспособной и благодарной аудиторией</span>
                         </div>
                     </div>
                     <div
-                        className={'w-[18.625rem] h-[5.25rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex items-center mt-[30rem] right-0 mr-[18%] scale-0'}>
-                        <div className={'w-13 h-13 rounded-2xl bg-[#F6F6F6] ml-4 flex justify-center items-center'}>
+                        className={'w-[18.625rem] h-[5.25rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex items-center mt-[25rem] right-0 mr-[16%] scale-0'}>
+                        <div className={'min-w-13 min-h-13 rounded-2xl bg-[#F6F6F6] ml-4 flex justify-center items-center'}>
                             <Image src={'/assets/images/height-emoji.png'} alt={'emoji'} width={26} height={26} style={{width: '1.625rem', height: '1.625rem'}}></Image>
                         </div>
                         <div className={'flex flex-col ml-3.5'}>
-                            <span className={'text-black font-semibold text-base leading-5'}>Рост прибыли</span>
-                            <span className={'font-medium text-base text-[#9F9F9F]'}>Увеличьте свой рост</span>
+                            <span className={'text-black font-semibold text-base leading-5'}>Можете управлять</span>
+                            <span className={'font-medium text-base text-[#9F9F9F] leading-5'}>часами и днями действия скидки</span>
                         </div>
                     </div>
                     <div
-                        className={'w-[12.5rem] h-[11.5rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex mt-[30rem] left-0 ml-[18%] flex-col scale-0'}>
+                        className={'w-[12.5rem] h-[11.5rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex mt-[25rem] left-0 ml-[18%] flex-col scale-0'}>
                         <div className={'w-13 h-13 rounded-2xl bg-[#F6F6F6] ml-4 mt-4 flex justify-center items-center'}>
                             <Image src={'/assets/images/map-emoji.png'} alt={'emoji'} width={26} height={26} style={{width: '1.625rem', height: '1.625rem'}}></Image>
                         </div>
-                        <p className={'text-black font-semibold text-[0.9375rem] ml-4 leading-5 mt-12'}>Ваша точка на карте профсоюза</p>
+                        <p className={'text-black font-semibold text-[0.9375rem] ml-4 leading-5 mt-12'}>Попадаете на карту и <br/> в каталог</p>
                     </div>
                     <div
                         className={'w-[12.5rem] h-[11.5rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex mt-20 right-0 mr-[18%] flex-col scale-0'}>
                         <div className={'w-13 h-13 rounded-2xl bg-[#F6F6F6] ml-4 mt-4 flex justify-center items-center'}>
                             <Image src={'/assets/images/hand-emoji.png'} alt={'emoji'} width={26} height={26} style={{width: '1.625rem', height: '1.625rem'}}></Image>
                         </div>
-                        <p className={'text-black font-semibold text-[0.9375rem] ml-4 leading-5 mt-12'}>Простое вступление в наш профсоюз</p>
+                        <p className={'text-black font-semibold text-[0.9375rem] ml-4 leading-5 mt-12'}>Повышаете лояльность и репутацию</p>
+                    </div>
+                    <div
+                        className={'w-[12.5rem] h-[11.5rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex mt-[35rem] right-0 mr-[41.5%] flex-col scale-0'}>
+                        <div className={'w-13 h-13 rounded-2xl bg-[#F6F6F6] ml-4 mt-4 flex justify-center items-center'}>
+                            <Image src={'/assets/images/shine-emoji.png'} alt={'emoji'} width={26} height={26} style={{width: '1.625rem', height: '1.625rem'}}></Image>
+                        </div>
+                        <p className={'text-black font-semibold text-[0.9375rem] ml-4 leading-5 mt-12'}>Участие бесплатно — <br/> только скидка от вас</p>
                     </div>
                 </div>
             </div>

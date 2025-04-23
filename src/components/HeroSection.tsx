@@ -10,6 +10,7 @@ import Profit from "@/components/ui/heroSection/Profit";
 import Particle from "@/components/ui/heroSection/Particle";
 import Advantages from "@/components/Advantages";
 import {RemToPx} from "@/utils/RemToPx";
+import Link from "next/link";
 
 const HeroSection = () => {
 
@@ -114,7 +115,7 @@ const HeroSection = () => {
         <div className={'bg-[#f2f2f2] w-full flex flex-col items-center'} ref={triggerBlockRef}>
             <div
                 className={'w-full bg-white h-[47.25rem] rounded-[2.75rem] max-w-[88.75rem] mt-7 flex flex-col items-center z-10'}>
-                <div className={'flex items-center gap-6 mt-[3.25rem]'}>
+                <div className={'flex items-center gap-6 mt-9'}>
                     <div className={'flex'}>
                         <div
                             className={'rounded-full bg-[#F6F8FA] w-[3.25rem] h-[3.25rem] flex justify-center items-center'}>
@@ -134,9 +135,12 @@ const HeroSection = () => {
                     </div>
                     <span className={'font-semibold text-base text-[#9F9F9F]'}>+20 компаний</span>
                 </div>
-                <h1 className={'font-semibold text-[3.5rem] text-center leading-[4.125rem] mt-8 text-black'}>Усильте
-                    вашу <br/> компанию с
-                    нашей <br/> поддержкой</h1>
+                <h1 className={'font-semibold text-[3.125rem] text-center leading-[3.6875rem] mt-4 text-black'}>Привлекайте
+                    новых <br/>клиентов через дисконтную <br/> систему профсоюзов
+                </h1>
+                <p className={'leading-[1.1875rem] font-medium text-base text-[#8C8C8C] text-center mt-5'}>Ваш бизнес на карте привилегий для тысяч членов профсоюзов. Бесплатное <br/> подключение. Увеличьте
+                    продажи — без затрат на рекламу.</p>
+                <Link className={'bg-black font-medium text-base text-white px-5.5 py-2.5 rounded-xl mt-5.5 cursor-pointer'} href={'#start'}>Приступить</Link>
                 <div
                     className={'mt-auto max-w-[19.75rem] w-full h-[19.25rem] bg-cover relative bg-white'}
                     style={{backgroundImage: `url('/assets/images/phone-border.png')`}}>
