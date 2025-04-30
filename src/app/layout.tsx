@@ -22,7 +22,7 @@ export default function RootLayout({
         <html lang="en" className={'scroll-smooth'}>
         <link rel="icon" href="/assets/images/favicon-icon.svg"/>
         <body
-            className={`${raleway.variable} antialiased`}
+            className={`${raleway.variable} antialiased `}
         >
         <SmoothScrolling>
             {children}

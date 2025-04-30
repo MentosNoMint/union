@@ -6,7 +6,7 @@ const InformationCard = ({props}: {
 }) => {
 
     return (
-        <div className={`flex max-w-[73.5rem] w-full justify-between absolute`}
+        <div className={`flex max-w-[73.5rem] w-full justify-between absolute max-md:flex-col max-md:items-center max-md:px-5.5`}
              style={props.position ? {right: `${props.position}%`} : {}}>
             <div className={'flex flex-col items-start'}>
                 <div
@@ -15,7 +15,7 @@ const InformationCard = ({props}: {
                 <h1 className={'text-black font-semibold text-[2.5rem] leading-[2.875rem] mt-10'}>{props.title}</h1>
                 <p className={'text-black font-medium text-xl leading-[1.4375rem] mt-8 max-w-[27rem]'}>{props.desc}</p>
             </div>
-            <div className={'pointer-events-none -ml-8'}>
+            <div className={'pointer-events-none -ml-8 max-md:-ml-0 max-md:mt-10'}>
                 <Image src={'/assets/images/phone.png'} alt={'phone'} width={300} height={600} style={{width: '18.75rem', height: '37.5rem'}}></Image>
             </div>
             <div

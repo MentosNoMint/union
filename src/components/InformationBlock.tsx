@@ -1,6 +1,6 @@
 const informationBlock = () => {
     return (
-        <div className={'w-full flex gap-3 justify-center'}>
+        <div className={'w-full flex gap-3 justify-center flex-wrap'}>
             <div className={'max-w-[21.5rem] w-full h-[21rem] bg-[#F2F2F2] rounded-[4rem] px-8'}>
                 <div className={'flex flex-col gap-1 mt-10'}>
                     <div className={'flex gap-1'}>

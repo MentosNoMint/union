@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <div className={'flex w-full justify-center bg-[#F2F2F2] pt-[14.3rem]'}>
+        <div className={'flex w-full justify-center bg-[#F2F2F2] pt-[14.3rem] max-md:px-3 max-md:pt-[8rem]'}>
             <div className={'w-full flex max-w-[86.25rem] flex-col bg-[#F2F2F2]'}>
-                <div className={'w-full flex justify-between items-end'}>
+                <div className={'w-full flex justify-between items-end flex-wrap'}>
                     <div className={'flex flex-col gap-4'}>
                         <Image src={'/assets/images/logo.svg'} alt={'logo'} width={'36'} height={'43'}/>
                         <h1 className={'text-2xl font-semibold text-black'}>Лига преимуществ</h1>
@@ -13,7 +13,7 @@ const Footer = () => {
                             рос
                             быстрее? <br/> Присоединяйтесь!</p>
                     </div>
-                    <div className={'flex max-w-[26.5rem] w-full justify-between'}>
+                    <div className={'flex max-w-[26.5rem] w-full justify-between max-md:mt-12'}>
                         <div className={'flex flex-col'}>
                             <span className={'text-lg font-semibold text-black mb-1.5'}>Навигация</span>
                             <nav className={'gap-1 flex flex-col'}>
@@ -36,7 +36,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className={'w-full h-px bg-[#CFCFCF] mt-[7.5rem]'}></div>
+                <div className={'w-full h-px bg-[#CFCFCF] mt-[7.5rem] max-md:mt-[4rem]'}></div>
                 <span className={'font-medium text-black text-base mt-8 mb-8'}>© Лига преимуществ, 2025.</span>
             </div>
         </div>

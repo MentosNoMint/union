@@ -63,6 +63,7 @@
         perspective: 93.75rem;
         z-index: 10;
     }
+
     .card__face {
         position: absolute;
         width: 100%;
@@ -103,8 +104,11 @@ body {
     font-family: var(--font-raleway), sans-serif;
 }
 
-html {
-    font-size: calc(0.95vw);
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: calc(0.95vw);
+    }
 }
+
 
 
