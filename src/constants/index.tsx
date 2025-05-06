@@ -10,6 +10,7 @@ export const informationCards = [
             image: 'hand',
             mark: 'about',
             position: 0,
+            src: '/assets/images/prof-landing.png',
         },
     },
     {
@@ -21,6 +22,7 @@ export const informationCards = [
             image: 'map',
             mark: 'map',
             position: -100,
+            src: '/assets/images/prof-maps.png',
         },
     },
     {
@@ -32,6 +34,7 @@ export const informationCards = [
             image: 'cup',
             mark: 'partner',
             position: -200,
+            src: '/assets/images/prof-partner.png',
         },
     },
 ];

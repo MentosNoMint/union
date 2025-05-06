@@ -45,8 +45,8 @@ const informationBlock = () => {
                         <div className={'w-6 h-6 rounded-md bg-[#D9D9D9]'}></div>
                     </div>
                 </div>
-                <h1 className={'text-black font-semibold text-lg mt-20'}></h1>
-                <p className={'text-base font-medium text-[#8A8A8A] leading-[1.2rem] mt-9 ml-7'}></p>
+                <h1 className={'text-black font-semibold text-lg mt-20'}>Стабильность и надёжность</h1>
+                <p className={'text-base font-medium text-[#8A8A8A] leading-[1.2rem] mt-9 ml-7'}>мы успешно развиваемся, доказывая свою эффективность на практике.</p>
             </div>
         </div>
     )

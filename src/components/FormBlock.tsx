@@ -2,9 +2,10 @@
 
 import MatterComponent from "@/components/ui/MatterComponent";
 import {useInView} from "react-intersection-observer";
-import {isMobile} from "@/utils/CheckMobile";
+import useMediaQuery from "@/utils/CheckMobile";
 
 const FormBlock = () => {
+  const isMobile = useMediaQuery(1024)
   const {ref, inView} = useInView({
     rootMargin: '-2% 0%',
   });
@@ -47,7 +48,7 @@ const FormBlock = () => {
                 </div>
               </form>
             </div>
-            {!isMobile() && (
+            {!isMobile && (
               <div ref={ref}>
                 {inView && (
                   <MatterComponent/>

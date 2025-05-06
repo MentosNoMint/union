@@ -65,7 +65,7 @@ const Advantages = () => {
     })
 
     return (
-        <div className={'h-[243.75rem] w-full'} ref={wrapperRef}>
+        <div className={'h-[243.75rem] w-full max-lg:h-[241rem]'} ref={wrapperRef}>
             <div className={'w-full mt-[37.5rem] sticky top-0 max-w-full overflow-x-hidden h-[62.5rem]'}>
                 <div className={'opacity-0 w-full'} ref={lightRef}>
                     <div className={'color-2'}></div>
@@ -83,7 +83,7 @@ const Advantages = () => {
                         </div>
                     </div>
                     <div
-                        className={'w-[18.625rem] h-[5.25rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex items-center mt-[25rem] right-0 mr-[16%] scale-0'}>
+                        className={'w-[18.625rem] h-[5.25rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex items-center mt-[25rem] right-0 mr-[16%] scale-0 max-lg:mr-[2%]'}>
                         <div className={'min-w-13 min-h-13 rounded-2xl bg-[#F6F6F6] ml-4 flex justify-center items-center'}>
                             <Image src={'/assets/images/height-emoji.png'} alt={'emoji'} width={26} height={26} style={{width: '1.625rem', height: '1.625rem'}}></Image>
                         </div>
@@ -93,7 +93,7 @@ const Advantages = () => {
                         </div>
                     </div>
                     <div
-                        className={'w-[12.5rem] h-[11.5rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex mt-[25rem] left-0 ml-[18%] flex-col scale-0'}>
+                        className={'w-[12.5rem] h-[11.5rem] border border-[#DEDEDE] bg-white rounded-3xl absolute flex mt-[25rem] left-0 ml-[18%] flex-col scale-0 max-lg:ml-[10%]'}>
                         <div className={'w-13 h-13 rounded-2xl bg-[#F6F6F6] ml-4 mt-4 flex justify-center items-center'}>
                             <Image src={'/assets/images/map-emoji.png'} alt={'emoji'} width={26} height={26} style={{width: '1.625rem', height: '1.625rem'}}></Image>
                         </div>

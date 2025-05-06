@@ -5,12 +5,13 @@ import React, {useState, useRef, useEffect} from "react";
 import InformationCard from "@/components/ui/aboutSection/InformationCard";
 import {informationCards} from "@/constants";
 import gsap from "gsap";
+import useMediaQuery from "@/utils/CheckMobile";
 
 const AboutSection = () => {
     const [isCurrentSlide, setIsCurrentSlide] = useState('about');
     const slideRef = useRef(null);
     const switcherRef = useRef(null);
-    const isMobile = window.innerWidth < 768;
+    const isMobile = useMediaQuery(1024)
 
     const animateSlide = (slideName: string) => {
         switch (slideName) {
@@ -42,7 +43,7 @@ const AboutSection = () => {
             <div className={'max-w-[86.25rem] w-full flex flex-col items-center'}>
                 <SwiperWrapper onButtonClick={handleButtonClick} ref={switcherRef}/>
                 <div className={'w-full overflow-hidden'}>
-                    <div className={'w-full mt-20 relative h-[80vh] max-md:h-[103.3vh]'} ref={slideRef}>
+                    <div className={'w-full mt-20 relative h-[83vh] max-md:h-[68rem]'} ref={slideRef}>
                         {informationCards.map((card, index) => (
                             <InformationCard props={card.props} key={index}/>
                         ))}

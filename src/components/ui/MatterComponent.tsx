@@ -145,7 +145,7 @@ const MatterComponent: React.FC = () => {
         };
     }, []);
 
-    return <div ref={matterBl} className={'w-[32rem] h-[29.875rem] border border-[#DEDEDE] rounded-[2rem]'} />
+    return <div ref={matterBl} className={'w-[32rem] h-[29.875rem] border border-[#DEDEDE] rounded-[2rem] max-lg:w-[27rem]'} />
 };
 
 export default MatterComponent;
