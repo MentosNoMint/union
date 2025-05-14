@@ -8,7 +8,7 @@ import useMediaQuery from "@/utils/CheckMobile";
 const CompanySlider = () => {
     const sliderRefs = useRef<HTMLDivElement[]>([]);
     const sliderRefs2 = useRef<HTMLDivElement[]>([]);
-    const isMobile = useMediaQuery(1024)
+    const isMobile = useMediaQuery(980)
 
     useGSAP(() => {
         const tl = gsap.timeline({repeat: -1})

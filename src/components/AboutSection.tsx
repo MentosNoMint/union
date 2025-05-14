@@ -43,7 +43,7 @@ const AboutSection = () => {
             <div className={'max-w-[86.25rem] w-full flex flex-col items-center'}>
                 <SwiperWrapper onButtonClick={handleButtonClick} ref={switcherRef}/>
                 <div className={'w-full overflow-hidden'}>
-                    <div className={'w-full mt-20 relative h-[83vh] max-md:h-[68rem]'} ref={slideRef}>
+                    <div className={'w-full mt-20 relative h-[83vh] max-md:h-[68rem] max-lg:h-[89vh] max-xl:h-[83vh]'} ref={slideRef}>
                         {informationCards.map((card, index) => (
                             <InformationCard props={card.props} key={index}/>
                         ))}

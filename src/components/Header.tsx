@@ -11,7 +11,7 @@ const Header = () => {
             <header className={'w-full flex justify-between items-center'}>
                 <Image src={'/assets/images/full-logo-orange.png'} alt={'logo'} width={138} height={38}
                        style={{width: '8.625rem', height: '2.375rem'}}/>
-                <div className={'flex gap-1 items-center max-md:hidden'}>
+                <div className={'flex gap-1 items-center max-lg:hidden'}>
                     <Link className={'font-semibold text-base text-black bg-white rounded-lg py-3 px-4 cursor-pointer'}
                           href={'#about'}>О нас</Link>
                     <div
